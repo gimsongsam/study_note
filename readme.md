@@ -1,11 +1,15 @@
-# 오라클 데이터 형식 1(문자형식)
+# 데이터 타입 종류
+<!-- <div style="margin: 0 auto"> -->
 type|Example
 ---|---|
 Character| 'shKim'<br/>'A'<br/>'148'
 Numeric|38<br/>3.85<br/>8.85F<br/>137
 Date|'2022-01-13'
 TIMESTAMP|'2022-01-13 10.38.29.00000'
+<!-- <div> -->
 
+<br/>
+# 오라클 데이터 형식 1(문자형식)
 ## Character 형식
 <strong> CHAR(50) (character)</strong>
 
@@ -30,3 +34,4 @@ TIMESTAMP|'2022-01-13 10.38.29.00000'
 <strong> NVARCHAR(3) (variable national character)</strong>
     
     * 가변적인 national한 데이터를 뜻한다.
+
