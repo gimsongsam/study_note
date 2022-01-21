@@ -10,14 +10,11 @@ INSERT INTO TB2(NAME, AGE) VALUES('김철수', 30);
 INSERT INTO TB2(NAME, AGE) VALUES('최수영', 50);
 INSERT INTO TB2(NAME, AGE) VALUES('하희영', 55);
 
--- INNER JOIN : 조건에 해당하는 값만 나옴
-SELECT * FROM TB1 INNER JOIN TB2 ON TB1.NAME = TB2.NAME;
+SELECT NVL('값','NULL일 시 값') FROM 테이블명
 
--- LEFT OUTER JOIN : 왼쪽 테이블에 값이 있을 시 오른쪽 테이블이 조건에 맞지 않아도 나옴 
-SELECT * FROM TB1 LEFT OUTER JOIN TB2 ON TB1.NAME = TB2.NAME;
+-- 실제 사용 시 --
+SELECT NVL('','NULL_입니다') SAY FROM DUAL
 
--- RIGHT OUTER JOIN : 오른쪽 테이블에 값이 있을 시 왼쪽 테이블이 조건에 맞지 않아도 나옴
-SELECT * FROM TB1 RIGHT OUTER JOIN TB2 ON TB1.NAME = TB2.NAME;
-
--- FULL OUTER JOIN : 한쪽 테이블에 값이 있을 시 다른 쪽 테이블이 조건에 맞지 않아도 나옴
-SELECT * FROM TB1 FULL OUTER JOIN TB2 ON TB1.NAME = TB2.NAME;
+-- 출력 시 --
+SAY
+NULL_입니다
