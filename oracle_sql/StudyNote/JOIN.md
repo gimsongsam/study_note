@@ -64,6 +64,7 @@ YJS|유재석|2|SQL 구문|YJS
 
 ## FULL OUTER JOIN
 * 어느 한쪽 테이블에 값이 있을 경우 다른 테이블과 조건이 맞지 않아도 모두 가져온다.
+
 ID|NAME|ID|TITLE|WRITER_ID
 |--|--|--|--|--|
 YJS|유재석|1|Oracle 개요|YJS
