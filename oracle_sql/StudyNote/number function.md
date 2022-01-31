@@ -1,5 +1,14 @@
 # 숫자 함수
-## 1. ROUND: 반올림
+## 절대값을 구하는 함수 ABS(n)
+```sql
+SELECT ABS(35), ABS(-35) FROM DUAL; -- 35 | 35
+```
+## 음수/양수를 알려주는 함수 SIGN(n)
+```sql
+SELECT SIGN(35), SIGN(-35), SIGN(0) FROM DAUL -- 1 | -1 | 0
+```
+
+## ROUND: 반올림
 * ROUND(실수, 소숫점 이하 자리수)
 * 실수를 반올림시켜서 지정한 소숫점 이하 자리수가 되게 만든다.
 ```sql
@@ -7,14 +16,14 @@ SELECT ROUND(12345.6789, 1) FROM DUAL -- 결과: 12345.7
 SELECT ROUND(12345.6789, 0) FROM DUAL -- 결과: 12346
 ```
 
-## 2. TRUNC: 내림(버림)
+## TRUNC: 내림(버림)
 * TRUNC(실수, 소숫점 이하 자릿수)
 * 실수를 내림해서 지정한 소숫점 이하 자리수가 되게 만든다.
 ```sql
 SELECT TRUNC(12345.6789, 1) FROM DUAL -- 결과: 12345.6
 ```
 
-## 3. CEIL: 올림한 정수
+## CEIL: 올림한 정수
 * CEIL(실수)
 * 올림한 정수를 출력한다.
 * ex) 게시판을 만들 때 총 페이지 계산을 위해서 사용.
@@ -24,7 +33,7 @@ SELECT CEIL(12345.6789) FROM DUAL -- 결과: 12346
 SELECT CEIL(12345.0) FROM DUAL -- 결과: 12345
 ```
 
-## 4. MOD: 나머지
+## MOD: 나머지
 * MOD(숫자, 나눌값)
 * 나머지 값을 구해준다.
 * 자바의 %와 유사하다.
