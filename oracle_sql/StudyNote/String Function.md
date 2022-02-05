@@ -49,3 +49,40 @@ SELECT LPAD('HELLO', 5, '0') FROM DUAL; -- HELLO
 SELECT LPAD('HELLO', 10, '0') FROM DUAL; -- HELLO00000
 SELECT RPAD('HELLO', 10, '0') FROM DUAL; -- 00000HELLO
 ```
+
+## 숫자를 반환하는 문자열 함수
+### 문자열 검색 함수 INSTR(문자열, 검색문자열, 위치, 찾을 수)
+```sql
+SELECT INSTR('ALL WE NEED TO IS JUST TO...', 'TO') FROM DUAL; -- 13
+SELECT INSTR('ALL WE NEED TO IS JUST TO...', 'TO', 15) FROM DUAL; -- 24(두번째 'TO'의 위치)
+SELECT INSTR('ALL WE NEED TO IS JUST TO...', 'TO', 1, 2) FROM DUAL; -- 24(두번째 'TO'의 위치)
+```
+
+**회원의 전화번호에서 두 번째 대시(-) 문자가 존재하는 위치를 출력하시오**
+```sql
+SELECT INSTR(PHONE, '-', 1, 2) FROM MEMBER;
+```
+**회원의 전화번호에서 첫 번째 대시(-) 문자와 두 번째 대시(-) 문자 사이의 간격을 구하시오**
+```sql
+SELECT INSTR(PHONE, '-', 1, 2) - INSTR(PHONE, '-', 1, 1) - 1 FROM MEMBER;
+```
+**회원의 전화번호에서 첫 번째 대시(-) 문자와 두 번째 대시(-) 문자 사이의 번호를 출력하시오**
+```sql
+SELECT SUBSTR(
+    PHONE, INSTR(PHONE, '-', 1, 1)+1,
+    INSTR(PHONE, '-', 1, 2) - INSTR(PHONE, '-', 1, 1) -1
+) FROM MEMBER;
+```
+
+## 문자열 길이를 얻는 함수
+```sql
+SELECT LENGTH('WHERE WE ARE') FROM DUAL;
+```
+**모든 회원의 핸드폰 번호와 번호의 문자열 길이를 조회하시오**
+```sql
+SELECT PHONE, LENGTH(PHONE) FROM MEMBER;
+```
+**회원 전화번호 컬럼에 포함된 문자 '-'를 없앤 전화번호의 길이를 출력하시오.**
+```sql
+SELECT LENGTH(REPLACE(PHONE, '-', '')) FROM MEMBER;
+```

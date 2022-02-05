@@ -42,3 +42,6 @@ SELECT LENGTHB('한글') FROM DUAL; -- 한글은 한 글자 당 3byte라는 것�
 -- 각 국의 언어 지원 여부
 SELECT * FROM NLS_DATABASE_PARAMETERS;
 
+-- CHECK 제약조건
+--테이블을 생성 한 후에 적용방법
+ALTER TABLE TEST ADD CONSTRAINT CK_TEST_PHONE CHECK(PHONE LIKE '010-%-____');

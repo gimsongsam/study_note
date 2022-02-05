@@ -40,3 +40,8 @@ SELECT CEIL(12345.0) FROM DUAL -- 결과: 12345
 ```sql
 SELECT MOD(10, 3) FROM DUAL -- 결과: 1
 ```
+
+## POWER(n1, n2) / SQRT(n): 숫자의 제곱을 구하는 함수 / 제곱근을 구하는 함수
+```
+SELECT POWER(5, 2), SQRT(25) FROM DUAL; -- 25 | 5
+```

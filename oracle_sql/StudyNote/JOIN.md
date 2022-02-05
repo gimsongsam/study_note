@@ -72,3 +72,49 @@ YJS|유재석|2|SQL 구문|YJS
 JUNG|정형돈|(null)|(null)|(null)
 KANG|강호동|(null)|(null)|(null)
 (null)|(null)|3|DML 사용하기|DRAGON
+
+## SELF JOIN
+**ex) 부서장이 관리하고 있는 부서원들을 출력하시오**
+
+### 예시:  
+
+**USER_LIST Table**
+ID|NAME|BOSS_ID
+|--|--|--
+YJS|유재석|yong
+JUNG|정형돈|yong
+KANG|강호동|(null)
+yong|김용만|(null)
+
+```sql
+SELECT M.*, B.NAME BOSS_NAME
+FROM MEMBER M LEFT OUTER JOIN MEMBER B ON B.ID = M.BOSS_ID;
+```
+
+### 결과:
+**USER_LIST Table**
+ID|NAME|BOSS_ID|BOSS_NAME
+|--|--|--|--
+YJS|유재석|yong|김용만
+JUNG|정형돈|yong|김용만
+KANG|강호동|(null)|(null)
+yong|김용만|(null)|(null)
+
+## UNION
+* 두개의 레코드를 하나로 합친다.
+* 중복된 데이터의 경우, 하나로 합친다.
+```sql
+SELECT ID, NAME FROM MEMBER
+    UNION
+SELECT WRITER_ID, TITLE FROM NOTICE;
+```
+
+## UNION ALL
+* 두개의 레코드를 하나로 합친다.
+* 중복된 데이터를 모두 보여준다.
+
+## MINUS
+* 중복된 값을 삭제하여 보여준다.
+
+## INTERSECT
+* 공통된 값만 남겨둔다.
