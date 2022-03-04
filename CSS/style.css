@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* 폰트설정(구글폰트 가져오기, 자체 fonts라는 폴더로부터 연동) */
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    /* 주요폰트 설정 */}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, main, nav, footer{display: block;}
+
+/*header:after, section:after, article:after, aside:after, main:after, nav:after,*/
+/*footer:after{content:""; display: block; clear:both;}*/
+/* display: flex;를 선언시에는 :after 가상공간을 설정하지 않는다. */
+
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+
+/* header */
+
