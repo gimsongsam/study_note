@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 폰트설정(구글폰트 가져오기, 자체 fonts라는 폴더로부터 연동) */
 
-*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
     /* 주요폰트 설정 */}
 html, body{margin: 0; padding: 0;}
 header, section, article, aside, main, nav, footer{display: block;}
@@ -16,4 +16,51 @@ a{text-decoration: none;}
 .clear{clear: both;}
 
 /* header */
+header{}
+header #header_cont{
+    width: 1000px; height: 70px;
+    display: flex;
+    background-color: #ccc;
+    margin: 0 auto;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+header #header_cont ul{
+    display: flex;
+    width: calc(100% / 3);
+}
+header #header_cont ul.left{justify-content: left;}
+header #header_cont ul.center{justify-content: center;}
+/*header #header_cont ul.right{justify-content: right;}*/
 
+
+header #header_cont ul.left li{}
+header #header_cont ul.center li{width: 100%; margin: 0px; position: relative;}
+header #header_cont ul.right li{}
+
+header #header_cont ul li{
+    margin-right: 1rem;
+}
+
+header #header_cont ul.center li input{
+    width: 100%; height: 2em;
+    /*background: transparent right no-repeat url("./search.png");*/
+    /*background-size: cover;*/
+}
+header #header_cont ul.center li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*header #header_cont ul.center li::after{*/
+/*    content: "🔍"; display: inline-block;*/
+/*    width: 5%;*/
+/*    height: 100%;*/
+/*    margin-left: 10px;*/
+/*    font-size: 1rem;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
